@@ -24,7 +24,7 @@ services:
 
   db:
     image: mysql:8.0
-    container_name: laravel_db_prod
+    container_name: antrian_db_prod
     restart: unless-stopped
     env_file:
       - .env
@@ -49,3 +49,5 @@ volumes:
 networks:
   antrian-network:
     driver: bridge
+  net:
+    external: true
